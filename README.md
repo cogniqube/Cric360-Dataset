@@ -295,9 +295,9 @@ If you use Cric-360 in your research, please cite:
 
 <div align="center">
 
-*Apache 2.0 · Free for academic and commercial use with attribution*
+*Apache 2.0 ·  For academic and commercial use with attribution*
 
-**CogniQube © 2025 · Cric-360 v1.0**
+**CogniQube © 2026 · Cric-360 v1.0**
 
 *The beginning of cricket computer vision research 🏏*
 
