@@ -13,7 +13,7 @@
 
 **The world's first large-scale, AI-cleaned cricket broadcast ground image dataset for computer vision research.**
 
-*Built by [CogniQube](https://github.com/cogniqube) · Led by [Sarim Shahzad](https://huggingface.co/sarimshahzad)*
+*Built by [CogniQube](https://cogniqube) · Led by [Sarim Shahzad](https://www.linkedin.com/in/sarim-shahzad/)*
 
 ---
 
@@ -265,7 +265,7 @@ If you use Cric-360 in your research, please cite:
 
 | | |
 |:---|:---|
-| 🌐 GitHub | [github.com/cogniqube](https://cogniqube) |
+| 🌐 Website | [cogniqube](https://cogniqube) |
 | 🤗 HuggingFace | [@sarimshahzad](https://huggingface.co/sarimshahzad) |
 | 👤 Lead Researcher | **Sarim Shahzad** |
 
