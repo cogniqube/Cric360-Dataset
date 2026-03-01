@@ -265,7 +265,7 @@ If you use Cric-360 in your research, please cite:
 
 | | |
 |:---|:---|
-| 🌐 GitHub | [github.com/cogniqube](https://github.com/cogniqube) |
+| 🌐 GitHub | [github.com/cogniqube](https://cogniqube) |
 | 🤗 HuggingFace | [@sarimshahzad](https://huggingface.co/sarimshahzad) |
 | 👤 Lead Researcher | **Sarim Shahzad** |
 
