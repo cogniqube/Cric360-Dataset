@@ -1,304 +1,197 @@
-# 🏏 Cric-360: Cricket Broadcast Ground Dataset
-
 <div align="center">
 
-![Cric-360 Banner](assets/banner.png)
+![Cric-360 banner](assets/banner.png)
 
-[![HuggingFace](https://img.shields.io/badge/🤗%20Dataset-sarimshahzad/Cric--360-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/datasets/sarimshahzad/Cric-360)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue?style=for-the-badge)](LICENSE)
-[![Images](https://img.shields.io/badge/Images-3%2C558-brightgreen?style=for-the-badge)](https://huggingface.co/datasets/sarimshahzad/Cric-360)
-[![Stadiums](https://img.shields.io/badge/Stadiums-~20-purple?style=for-the-badge)](#-venue-coverage)
-[![Version](https://img.shields.io/badge/Version-v1.0-orange?style=for-the-badge)](#-version-history)
-[![CogniQube](https://img.shields.io/badge/By-CogniQube-black?style=for-the-badge)](#-about-cogniqube)
+# 🏏 Cric-360 — Cricket Ground Dataset
 
-**The world's first large-scale, AI-cleaned cricket broadcast ground image dataset for computer vision research.**
+### The world's largest AI-curated cricket **ground** image dataset for computer vision
 
-*Built by [CogniQube](https://cogniqube) · Led by [Sarim Shahzad](https://www.linkedin.com/in/sarim-shahzad/)*
+[![Hugging Face](https://img.shields.io/badge/🤗%20Dataset-Cric--360-yellow)](https://huggingface.co/datasets/sarimshahzad/Cric-360)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Cogni-Qube/Cric360-Dataset/blob/main/notebooks/Cric360_v2_quickstart.ipynb)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/version-2.0-brightgreen.svg)](#-version-history)
+[![Real frames](https://img.shields.io/badge/real%20frames-13%2C545-orange.svg)](#-whats-inside)
+[![Venues](https://img.shields.io/badge/venues-15%2B-informational.svg)](#-diversity)
 
----
+**Maintained by [CogniQube](https://github.com/Cogni-Qube) · Lead: [Sarim Shahzad](https://github.com/sarimshahzad)**
 
-### ⬇️ [Download on HuggingFace →](https://huggingface.co/datasets/sarimshahzad/Cric-360)
+[**Explore on 🤗**](https://huggingface.co/datasets/sarimshahzad/Cric-360) ·
+[**Open in Colab ▶**](https://colab.research.google.com/github/Cogni-Qube/Cric360-Dataset/blob/main/notebooks/Cric360_v2_quickstart.ipynb) ·
+[**Report an issue**](https://github.com/Cogni-Qube/Cric360-Dataset/issues)
 
 </div>
 
 ---
 
-## 📖 What is Cric-360?
+Cric-360 is a large-scale cricket **ground image dataset** for computer-vision research —
+ground/pitch segmentation, player & ball tracking, camera calibration, AR ad-insertion and scene
+understanding. **v2 combines the original v1 frames with a 2.8× expansion** into one dataset.
+This repository holds the **docs, metadata and a Colab notebook**; the images live on
+**[🤗 Hugging Face](https://huggingface.co/datasets/sarimshahzad/Cric-360)**.
 
-Cric-360 is a carefully curated collection of **3,558 broadcast-quality cricket ground frames** extracted from real live match footage, captured across **~20 international stadiums** across Asia, Africa, SENA (South Africa, England, New Zealand, Australia), and neutral venues worldwide.
+## 📖 Contents
+- [What's inside](#-whats-inside)
+- [Quick start](#-quick-start)
+- [The two subsets](#-the-two-subsets)
+- [Diversity](#-diversity)
+- [Use cases](#-use-cases)
+- [v1 segmentation masks](#-v1-ground-segmentation-masks)
+- [Repository structure](#-repository-structure)
+- [Licensing](#-licensing)
+- [Version history](#-version-history)
 
-Unlike existing cricket datasets focused only on action recognition or ball tracking, **Cric-360 targets the complete visual understanding of cricket broadcast scenes** — from ground segmentation to augmented reality overlays.
+## 📊 What's inside
 
-All images have been cleaned through a **custom AI pipeline using LaMa inpainting** to remove broadcast overlays (TV logos, scorebars), producing clean ground-truth quality frames ready for research.
+| | **`grounds`** | **`games`** | **Total** |
+|---|---:|---:|---:|
+| **Images** | 13,545 | 6,418 | **19,963** |
+| **Type** | Real TV broadcast | Synthetic (*Real Cricket* game) | mixed |
+| **Availability** | ✅ Hosted on Hugging Face | 📩 On request | — |
+| **Resolution** | 1280–1924 px wide | 2412 × 1080 | — |
+| **License** | Apache 2.0 | Research-use only ⚠️ | see [Licensing](#-licensing) |
 
-> ⚠️ **This is v1.0 — an initial release.** We are actively expanding this dataset with more venues, annotations, and modalities. [See the roadmap →](#-version-history--roadmap)
+The **13,545 real frames** = **3,558 (v1)** + **9,987 (v2)**, combined into a single dataset and tagged
+by a `version` column. **15+ venues worldwide · day / night / twilight · multiple broadcast angles.**
 
----
+<table>
+<tr>
+<td width="50%"><img src="assets/sample_grounds_broadcast.jpg" alt="real broadcast frame"><br><sub><b>grounds</b> — real TV broadcast frame</sub></td>
+<td width="50%"><img src="assets/sample_games_synthetic.jpg" alt="synthetic Real Cricket frame"><br><sub><b>games</b> — synthetic <i>Real Cricket</i> frame (on request)</sub></td>
+</tr>
+</table>
 
-## 🌍 Dataset Diversity
-
-### 🏟️ ~20 International Stadiums
-
-| Region | Coverage |
-|:---|:---|
-| 🌏 **Asia** | Pakistan, India, Sri Lanka, Bangladesh, UAE |
-| 🌍 **Africa** | South Africa venues |
-| 🏴󠁧󠁢󠁥󠁮󠁧󠁿 **England** | Premier English grounds |
-| 🇦🇺 **SENA** | Australia, New Zealand stadiums |
-| 🌐 **Neutral venues** | Internationally hosted matches |
-
-### ☀️🌙 Lighting & Conditions
-
-| | |
-|:---|:---|
-| ☀️ Day matches | Full sunlight, crisp shadows |
-| 🌅 Day-Night | Transitional mixed lighting |
-| 💡 Night matches | Full floodlights, deep shadow diversity |
-| 🌥️ Overcast | Flat diffuse lighting |
-
-### 📷 Camera Diversity
-
-- **Wide shots** — full ground, boundary to boundary
-- **Medium shots** — mid-pitch, wicket-end focused
-- **Close-up shots** — tight on crease and pitch surface
-- **High cameras** — overhead & spider-cam views
-- **Side-on angles** — classic broadcast perspective
-- **Low angles** — near-boundary, ground-level
-
-### 🌑 Shadow Diversity
-
-| Shadow Type | Present |
-|:---|:---|
-| Player shadows on pitch | ✅ |
-| Stadium and stand shadows | ✅ |
-| Floodlight pole shadows | ✅ |
-| Carpet / pitch shadows | ✅ |
-| Partial ground occlusion | ✅ |
-
----
-
-## 📊 Stats at a Glance
-
-| Property | Value |
-|:---|:---|
-| **Total Images** | 3,558 |
-| **Primary Resolution** | 1920 × 990–1080 px |
-| **Format** | JPEG |
-| **Train / Val / Test** | 2,490 / 533 / 535 |
-| **Split Seed** | 42 (reproducible) |
-| **Cleaning** | LaMa AI inpainting |
-| **License** | Apache 2.0 |
-
-### Quality Breakdown
-
-| Tier | Count | % |
-|:---|---:|---:|
-| 🟢 HD (≥1920×1080) | 424 | 11.9% |
-| 🔵 HD-Ready | 3,072 | 86.3% |
-| 🟡 SD | 61 | 1.7% |
-| **Total** | **3,558** | |
-
----
-
-## 🎯 Use Cases & Applications
-
-Cric-360 is a **multi-purpose foundation dataset**. It powers research across a wide range of computer vision tasks:
-
-### 📦 Segmentation
-| Task | Description |
-|:---|:---|
-| **Ground Segmentation** | Pitch, outfield, boundary rope, grass types, stands |
-| **Player Segmentation** | Isolate players from diverse ground textures |
-| **Shadow Segmentation** | Natural + artificial shadow masks |
-
-### 🎯 Detection & Tracking
-| Task | Description |
-|:---|:---|
-| **Ball Tracking** | Ground-plane context for trajectory models |
-| **Player Tracking** | Multi-angle diversity for robust detectors |
-| **Ad Board Detection** | Physical and virtual advertisement boards |
-
-### 🗺️ Geometry & Calibration
-| Task | Description |
-|:---|:---|
-| **Homography Estimation** | Broadcast → top-down pitch plane mapping |
-| **Camera Calibration** | Intrinsic/extrinsic estimation |
-| **3D Reconstruction** | Depth and geometry from diverse angles |
-
-### 🎮 AR & Broadcast Enhancement
-| Task | Description |
-|:---|:---|
-| **Virtual Ad Insertion** | Clean ground plane for digital ad overlays |
-| **3D Logo Placement** | Ground surface for AR brand overlays |
-| **Broadcast Cleaning** | Scorebar/logo removal pipeline |
-| **Virtual Pitch Replacement** | Synthetic pitch overlays for broadcast |
-
-### 🤖 Scene Understanding
-| Task | Description |
-|:---|:---|
-| **Depth Estimation** | Monocular depth on complex stadium scenes |
-| **Lighting Estimation** | Shadow diversity for illumination models |
-| **Domain Adaptation** | Synthetic → real cricket distribution bridge |
-
----
-
-## 🧹 AI Cleaning Pipeline
-
-```
-Raw Broadcast Frame
-       │
-       ▼
-┌──────────────────────────────┐
-│   Step 1: TV Logo Removal    │  LaMa inpainting on corner regions
-└──────────────────────────────┘
-       │
-       ▼
-┌──────────────────────────────┐
-│   Step 2: Scorebar Removal   │  Mirror-pad trick → photorealistic fill
-└──────────────────────────────┘
-       │
-       ▼
-┌──────────────────────────────┐
-│   Step 3: QA Verification    │  Manual spot-check of inpainted regions
-└──────────────────────────────┘
-       │
-       ▼
-  Clean Broadcast Frame ✅
-```
-
-> **First dataset to publicly document AI-based overlay removal as part of sports dataset curation.**
-
----
-
-## ⬇️ Download & Usage
-
-### Via 🤗 HuggingFace Datasets *(Recommended)*
+## 🚀 Quick start
 
 ```python
 from datasets import load_dataset
 
-ds = load_dataset("sarimshahzad/Cric-360")
+# ALL real broadcast frames (v1 + v2 = 13,545)
+grounds = load_dataset("sarimshahzad/Cric-360", "grounds", split="train")
 
-# Access samples
-for sample in ds["train"]:
-    image = sample["image"]          # PIL Image
-    print(image.size, sample["quality"], sample["has_carpet"])
+# filter by release or by the recommended split (metadata columns)
+v2   = grounds.filter(lambda r: r["version"] == "v2")     # 9,987
+test = grounds.filter(lambda r: r["split"]   == "test")   # 1,543
 ```
-
-### Via HuggingFace CLI
 
 ```bash
-pip install huggingface_hub
-huggingface-cli download sarimshahzad/Cric-360 --repo-type dataset --local-dir ./Cric-360
+huggingface-cli download sarimshahzad/Cric-360 --repo-type dataset --local-dir Cric-360
 ```
 
-### Via Git LFS
+▶️ Prefer the browser? **[Open the interactive quickstart in Google Colab](https://colab.research.google.com/github/Cogni-Qube/Cric360-Dataset/blob/main/notebooks/Cric360_v2_quickstart.ipynb)** — load data, view frames, plot stats, no install.
 
-```bash
-git lfs install
-git clone https://huggingface.co/datasets/sarimshahzad/Cric-360
-```
+## 🖼️ The two subsets
 
-🔗 **Full dataset page:** [huggingface.co/datasets/sarimshahzad/Cric-360](https://huggingface.co/datasets/sarimshahzad/Cric-360)
+### `grounds` — real broadcast frames (13,545) ✅
 
----
+Genuine frames from live cricket TV broadcasts: **3,558 from v1 + 9,987 from v2**.
 
-## 📁 Repository Contents
+| Source (v2) | Competition | Region | Images |
+|---|---|---|--:|
+| `cognizant` | Sponsor-branded series | — | 2,424 |
+| `bbl` | Big Bash League | Australia | 2,066 |
+| `frame` | Unspecified | — | 1,449 |
+| `test` | Test match | — | 1,090 |
+| `irl vs ind` | Bilateral | Ireland v India | 826 |
+| `psl` / `psll` | Pakistan Super League | Pakistan / UAE | 755 |
+| `ipl` | Indian Premier League | India | 553 |
+| `ban test` | Test match | Bangladesh | 408 |
+| `sunrise` | Franchise T20 | — | 330 |
+| others (`ind vs afg`, `ban`, `aus`) | International | — | 86 |
+
+v1 frames carry `source_tag = v1_broadcast` plus `venue` / `has_carpet` labels where available.
+
+### `games` — synthetic frames (6,418) — available on request ⚠️
+
+Screenshots from the **Real Cricket** mobile game (**Nautilus Mobile / KRAFTON**) — CGI players,
+crowds and stadiums at a fixed **2412 × 1080**. Great for augmentation and sim-to-real experiments.
+
+**Not hosted publicly.** Shared **on demand for non-commercial research** — inspect
+[`metadata/games_metadata.csv`](metadata/games_metadata.csv), then
+[open an issue](https://github.com/Cogni-Qube/Cric360-Dataset/issues) to request the images.
+
+> Copyrighted third-party game content, **excluded from Apache 2.0**. Rights remain with
+> Nautilus Mobile / KRAFTON. Rights-holders may open an issue to request changes.
+
+## 🌍 Diversity
+
+| Dimension | Coverage |
+|---|---|
+| **Venues** | 15+ stadiums worldwide (Australia, India, Pakistan, UAE, Bangladesh, Ireland, …) |
+| **Lighting** | Daylight · day–night twilight · full floodlit night · overcast |
+| **Camera angles** | Wide broadcast, side-on, straight, high/overhead, low-angle, on-ground |
+| **Ground state** | Fresh & worn pitch, footmarks, shadows, partial occlusion |
+| **Formats** | T20 leagues, ODIs, Test matches, bilateral internationals |
+
+## 🎯 Use cases
+
+- Ground / pitch **segmentation** (v1 masks available — see below)
+- Player & ball **detection / tracking**
+- **Homography & camera calibration**
+- **AR / virtual advertising** insertion
+- **Depth** estimation & scene understanding
+- **Sim-to-real / domain adaptation** (pair `grounds` with `games`)
+
+## 🧩 v1 Ground-Segmentation masks
+
+Pixel-level **ground-segmentation masks for the v1 frames are available** (playable-turf region) —
+ideal for training/benchmarking segmentation models. Request them via
+[Issues](https://github.com/Cogni-Qube/Cric360-Dataset/issues). Masks for the v2 frames are on the roadmap.
+
+## 🗂️ Repository structure
 
 ```
 Cric360-Dataset/
-├── assets/
-│   └── banner.png           ← Repo banner
-├── metadata.csv             ← Per-image metadata (3,558 rows)
-├── dataset_stats.json       ← Summary statistics
-└── README.md
+├── README.md
+├── LICENSE                 ← Apache 2.0 (see Licensing for the synthetic-subset carve-out)
+├── NOTICE                  ← third-party content / license scope
+├── dataset_stats.json      ← combined statistics (v1 + v2)
+├── metadata.csv            ← all 13,545 real frames (v1 + v2) — mirrors Hugging Face
+├── notebooks/
+│   └── Cric360_v2_quickstart.ipynb   ← Colab quickstart
+├── metadata/
+│   └── games_metadata.csv  ← on-request synthetic subset (6,418)
+└── assets/
+    └── banner.png, sample_grounds_broadcast.jpg, sample_games_synthetic.jpg
 ```
 
-> ℹ️ The actual images live on HuggingFace (1.16 GB). This repo contains metadata and documentation only.
+> Real `grounds` images (v1 + v2) live on **Hugging Face**. Synthetic `games` images are shared
+> **on request** — this repo carries only their metadata so you can inspect them first.
 
----
+## 📜 Licensing
 
-## 🔭 Version History & Roadmap
+| Part | License |
+|---|---|
+| `grounds` real frames (v1 + v2), metadata, code | **Apache 2.0** |
+| `games` synthetic frames | **Research-use only** — © Nautilus Mobile / KRAFTON, not Apache 2.0 |
 
-### ✅ v1.0 — Current *(March 2025)*
-- 3,558 AI-cleaned broadcast frames
-- ~20 international stadiums
-- Day, day-night, and night conditions
-- All camera angles and frame distances
-- Train / Val / Test split with full metadata
+Underlying broadcast footage remains the property of the respective rights-holders; real frames are
+shared under Apache 2.0 for research, consistent with v1.
 
-### 🚀 Planned — v2.0+
-- [ ] Semantic segmentation masks
-- [ ] Player bounding box annotations
-- [ ] Homography ground-truth matrices
-- [ ] 10,000+ image target
-- [ ] Carpet / no-carpet hand-verified labels
-- [ ] Night-only and Asia-only subsets
+## 🏷️ Version history
 
-> ⭐ **Star this repo** to get notified of updates!
+| Version | Date | Real frames | Synthetic | Highlights |
+|---|---|--:|--:|---|
+| **v2.0** | Jul 2026 | **13,545** (v1+v2) | 6,418 (on request) | Combined release, unified metadata, synthetic subset, Colab |
+| v1.0 | Mar 2025 | 3,558 | — | First release · ground-segmentation masks available |
 
----
-
-## 📜 Citation
-
-If you use Cric-360 in your research, please cite:
+## 📖 Citation
 
 ```bibtex
-@dataset{cric360_2025,
-  author       = {Shahzad, Sarim and {CogniQube}},
-  title        = {Cric-360: A Cricket Broadcast Ground Dataset for Computer Vision (v1.0)},
-  year         = {2025},
-  publisher    = {Hugging Face},
-  organization = {CogniQube},
-  url          = {https://huggingface.co/datasets/sarimshahzad/Cric-360},
-  note         = {Version 1.0 — initial release}
+@dataset{shahzad_cric360_v2_2026,
+  author  = {Shahzad, Sarim and {CogniQube}},
+  title   = {Cric-360 v2: A Cricket Broadcast and Synthetic Ground Dataset for Computer Vision},
+  year    = {2026},
+  version = {2.0},
+  url     = {https://huggingface.co/datasets/sarimshahzad/Cric-360}
 }
 ```
 
 ---
 
-## 🏢 About CogniQube
-
 <div align="center">
+Made with 🏏 by <a href="https://github.com/Cogni-Qube">CogniQube</a> ·
+<a href="https://huggingface.co/datasets/sarimshahzad/Cric-360">Dataset on Hugging Face</a> ·
+<a href="https://colab.research.google.com/github/Cogni-Qube/Cric360-Dataset/blob/main/notebooks/Cric360_v2_quickstart.ipynb">Colab</a>
 
-**CogniQube** is an AI research and computer vision company building tools and datasets at the intersection of sports, broadcast media, and deep learning.
-
-| | |
-|:---|:---|
-| 🌐 Website | [cogniqube](https://cogniqube) |
-| 🤗 HuggingFace | [@sarimshahzad](https://huggingface.co/sarimshahzad) |
-| 👤 Lead Researcher | **Sarim Shahzad** |
-
-</div>
-
----
-
-## 🔗 Related Work
-
-| Dataset | Domain | Notes |
-|:---|:---|:---|
-| [SoccerNet](https://www.soccer-net.org/) | Soccer | Broadcast video + events |
-| [WorldCup2014](https://nhoma.github.io/) | Soccer | Homography / registration |
-| CricShot10 | Cricket | Shot classification only |
-
-> ⚠️ No comparable cricket *ground* dataset exists publicly. **Cric-360 is the first.**
-
----
-
-## 📬 Contact
-
-- 🐛 Issues & suggestions: [Open an issue](https://github.com/cogniqube/Cric360-Dataset/issues)
-- 🤗 Dataset page: [HuggingFace Community tab](https://huggingface.co/datasets/sarimshahzad/Cric-360/discussions)
-- 🤝 Collaboration: Open to annotation partners and research groups
-
----
-
-<div align="center">
-
-*Apache 2.0 ·  For academic and commercial use with attribution*
-
-**CogniQube © 2026 · Cric-360 v1.0**
-
-*The beginning of cricket computer vision research 🏏*
-
+⭐ If this dataset helps your research, consider starring the repo.
 </div>
