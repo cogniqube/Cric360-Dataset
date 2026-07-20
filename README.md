@@ -11,7 +11,7 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/version-2.0-brightgreen.svg)](#-version-history)
 [![Real frames](https://img.shields.io/badge/real%20frames-13%2C545-orange.svg)](#-whats-inside)
-[![Venues](https://img.shields.io/badge/venues-15%2B-informational.svg)](#-diversity)
+[![Venues](https://img.shields.io/badge/venues-35%2B-informational.svg)](#-diversity)
 
 **Maintained by [CogniQube](https://github.com/Cogni-Qube) · Lead: [Sarim Shahzad](https://github.com/sarimshahzad)**
 
@@ -51,7 +51,7 @@ This repository holds the **docs, metadata and a Colab notebook**; the images li
 | **License** | Apache 2.0 | Research-use only ⚠️ | see [Licensing](#-licensing) |
 
 The **13,545 real frames** = **3,558 (v1)** + **9,987 (v2)**, combined into a single dataset and tagged
-by a `version` column. **15+ venues worldwide · day / night / twilight · multiple broadcast angles.**
+by a `version` column. **35+ venues worldwide · day / night / twilight · multiple broadcast angles.**
 
 <table>
 <tr>
@@ -116,7 +116,7 @@ crowds and stadiums at a fixed **2412 × 1080**. Great for augmentation and sim-
 
 | Dimension | Coverage |
 |---|---|
-| **Venues** | 15+ stadiums worldwide (Australia, India, Pakistan, UAE, Bangladesh, Ireland, …) |
+| **Venues** | 35+ stadiums worldwide across v1 + v2 (Australia, India, Pakistan, UAE, Bangladesh, Ireland, …) |
 | **Lighting** | Daylight · day–night twilight · full floodlit night · overcast |
 | **Camera angles** | Wide broadcast, side-on, straight, high/overhead, low-angle, on-ground |
 | **Ground state** | Fresh & worn pitch, footmarks, shadows, partial occlusion |
